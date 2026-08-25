@@ -1,0 +1,216 @@
+
+/* =========================================================
+   JUNHONG KIM Portfolio Custom UI
+   ========================================================= */
+.header_area .navbar .nav .nav-item .nav-link { font-size: 13px; }
+.logo_h img { width: auto !important; height: 28px !important; max-width: 220px; }
+
+.home_banner_area .home_left_img img {
+    width: 100%;
+    max-width: 520px;
+    max-height: 620px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+.banner_content h3 { font-size: 28px; margin: 5px 0 15px; color: #222; }
+.banner_btn_outline {
+    background: #fff !important;
+    color: #8490ff !important;
+    border: 1px solid #8490ff;
+    margin-left: 10px;
+}
+
+.circle_skill_grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 28px;
+    align-items: start;
+}
+.circle_skill {
+    text-align: center;
+    padding: 12px 5px 20px;
+}
+.circle_svg {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 20px;
+}
+.circle_svg svg {
+    width: 180px;
+    height: 180px;
+    transform: rotate(-90deg);
+    overflow: visible;
+}
+.circle_bg {
+    fill: none;
+    stroke: #edf0f7;
+    stroke-width: 13;
+}
+.circle_value {
+    fill: none;
+    stroke: #8490ff;
+    stroke-width: 13;
+    stroke-linecap: round;
+    stroke-dasharray: 477.52;
+    stroke-dashoffset: 477.52;
+    transition: stroke-dashoffset 2s cubic-bezier(.22,.61,.36,1);
+}
+.circle_skill:nth-child(2n) .circle_value { stroke: #6d8cff; }
+.circle_skill:nth-child(3n) .circle_value { stroke: #7b73ff; }
+.circle_svg strong {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font: 700 34px/1 "Heebo", sans-serif;
+    color: #222;
+}
+.circle_skill h4 { font-size: 19px; margin-bottom: 4px; color: #222; }
+.circle_skill p { margin: 0; color: #999; font-size: 13px; }
+
+.impact_area .main_title { margin-bottom: 45px; }
+.impact_dashboard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 50px;
+}
+.impact_metric {
+    padding: 30px 28px;
+    border-radius: 14px;
+    background: #fff;
+    box-shadow: 0 12px 35px rgba(0,0,0,.08);
+}
+.impact_metric span { display: block; color: #999; font-size: 14px; margin-bottom: 8px; }
+.impact_metric strong { display: block; color: #222; font: 700 31px/1.25 "Heebo", sans-serif; }
+.impact_metric small { display: block; margin-top: 7px; color: #8490ff; }
+
+.large_chart {
+    padding: 42px 46px 48px;
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 15px 45px rgba(0,0,0,.09);
+}
+.chart_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+}
+.chart_header h3 { margin: 0; font-size: 25px; color: #222; }
+.chart_header span { font-size: 13px; color: #999; }
+.chart_body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 45px;
+    min-height: 350px;
+    align-items: end;
+}
+.chart_group { text-align: center; }
+.bars {
+    height: 280px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    gap: 18px;
+    border-bottom: 1px solid #e8ebf2;
+    position: relative;
+}
+.bar {
+    width: 72px;
+    height: 0;
+    border-radius: 9px 9px 0 0;
+    background: #dfe3ec;
+    position: relative;
+    transition: height 1.7s cubic-bezier(.22,.61,.36,1);
+}
+.bar.after { background: #8490ff; }
+.bar b {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -32px;
+    white-space: nowrap;
+    font-size: 15px;
+    color: #333;
+}
+.chart_group h4 { margin-top: 18px; font-size: 17px; color: #444; }
+
+.projects_area .projects_inner {
+    margin-left: -12px;
+    margin-right: -12px;
+}
+.projects_area .projects_inner > [class*="col-"] {
+    padding-left: 12px;
+    padding-right: 12px;
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+.projects_area .projects_item {
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(0,0,0,.07);
+}
+.projects_area .projects_item img.project_thumb {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+}
+.projects_area .projects_text { min-height: 92px; }
+.projects_area .projects_text h4 { margin-bottom: 4px; }
+.projects_area .projects_text p { margin-bottom: 0; }
+.portfolio_github_btn {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 12px;
+    color: #8490ff;
+}
+
+@media (max-width: 1199px) {
+    .circle_skill_grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 991px) {
+    .circle_skill_grid { grid-template-columns: repeat(2, 1fr); }
+    .impact_dashboard { grid-template-columns: 1fr; }
+    .chart_body { grid-template-columns: 1fr; gap: 50px; }
+    .bars { height: 240px; }
+    .projects_area .projects_inner > [class*="col-"] {
+        flex: 0 0 50%; max-width: 50%;
+    }
+    .projects_area .projects_item img.project_thumb { height: 240px; }
+    .home_banner_area .home_left_img { padding-top: 100px !important; }
+}
+@media (max-width: 575px) {
+    .circle_skill_grid { grid-template-columns: 1fr; }
+    .circle_svg, .circle_svg svg { width: 165px; height: 165px; }
+    .projects_area .projects_inner > [class*="col-"] {
+        flex: 0 0 100%; max-width: 100%;
+    }
+    .projects_area .projects_item img.project_thumb { height: 230px; }
+    .banner_btn_outline { margin-left: 0; margin-top: 10px; }
+    .large_chart { padding: 28px 20px; }
+    .chart_header { display: block; }
+}
+
+/* Korean secondary-page polish */
+.banner_area .banner_content h2 { letter-spacing: -0.03em; }
+.page_link a { font-size: 13px; }
+.about_problem_list .problem_item h5 { color:#222; margin-bottom:8px; }
+.about_problem_list .problem_item p { color:#777; line-height:1.8; }
+.contact_area .main_title { margin-bottom:35px; }
+.contact_area .mapBox {
+    width:100%;
+    height:430px;
+    border-radius:12px;
+    overflow:hidden;
+    margin-bottom:45px;
+    box-shadow:0 12px 35px rgba(0,0,0,.08);
+}
+.contact_notice { color:#999; font-size:13px; margin-top:10px; }
+@media (max-width:767px) {
+    .contact_area .mapBox { height:320px; }
+}
