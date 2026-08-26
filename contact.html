@@ -37,7 +37,6 @@
 <ul class="nav navbar-nav menu_nav ml-auto">
     <li class="nav-item"><a class="nav-link" href="index.html">홈</a></li>
     <li class="nav-item"><a class="nav-link" href="about-us.html">소개</a></li>
-    <li class="nav-item"><a class="nav-link" href="portfolio.html">프로젝트</a></li>
     <li class="nav-item"><a class="nav-link" href="https://github.com/Kimjh1214" target="_blank" rel="noopener">깃허브</a></li>
     <li class="nav-item"><a class="nav-link" href="contact.html">연락하기</a></li>
 </ul>
@@ -48,25 +47,12 @@
         </header>
         <!--================Header Menu Area =================-->
         
-        <!--================Home Banner Area =================-->
-<section class="banner_area">
-    <div class="banner_inner d-flex align-items-center">
-        <div class="overlay bg-parallax"></div>
-        <div class="container">
-            <div class="banner_content text-center">
-                <h2>연락하기</h2>
-                <div class="page_link"><a href="index.html">홈</a><a href="contact.html">연락하기</a></div>
-            </div>
-        </div>
-    </div>
-</section>
-<!--================End Home Banner Area =================-->
 
 <section class="contact_area p_120">
     <div class="container">
         <div class="main_title text-center">
             <h2>연락하기</h2>
-            <p>채용, 프로젝트, 개발 관련 문의가 있다면 연락 가능함.</p>
+            <p>채용, 프로젝트, 개발 관련 문의가 있다면 연락 가능합니다.</p>
         </div>
         <div id="mapBox" class="mapBox" aria-label="Google 지도"></div>
         <div class="row mt-40">
@@ -75,7 +61,7 @@
                     <div class="info_item">
                         <i class="lnr lnr-home"></i>
                         <h6>대한민국</h6>
-                        <p>서울 기준 지도 표시</p>
+                        <p>서울 관악구 신림동</p>
                     </div>
                     <div class="info_item">
                         <i class="lnr lnr-github"></i>
@@ -90,19 +76,99 @@
                 </div>
             </div>
             <div class="col-lg-8">
-                <form class="row contact_form" action="#" method="post" id="contactForm" onsubmit="return false;">
-                    <div class="col-md-6">
-                        <div class="form-group"><input type="text" class="form-control" id="name" name="name" placeholder="이름"></div>
-                        <div class="form-group"><input type="email" class="form-control" id="email" name="email" placeholder="이메일"></div>
-                        <div class="form-group"><input type="text" class="form-control" id="subject" name="subject" placeholder="제목"></div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group"><textarea class="form-control" name="message" id="message" rows="5" placeholder="문의 내용을 입력"></textarea></div>
-                    </div>
-                    <div class="col-md-12 text-right">
-                        <p class="contact_notice">현재 정적 포트폴리오이므로 문의 양식은 화면만 제공함.</p>
-                    </div>
-                </form>
+                <form id="contactForm">
+
+
+                        <!-- 제목 -->
+
+                        <input
+                            type="hidden"
+                            name="_subject"
+                            value="JUNHONG KIM 포트폴리오 문의">
+
+
+                        <!-- 이름 -->
+
+                        <div class="form-group">
+
+                            <input
+                                type="text"
+                                name="name"
+                                class="form-control"
+                                placeholder="이름"
+                                required>
+
+                        </div>
+
+
+                        <!-- 이메일 -->
+
+                        <div class="form-group">
+
+                            <input
+                                type="email"
+                                name="email"
+                                class="form-control"
+                                placeholder="이메일"
+                                required>
+
+                        </div>
+
+
+                        <!-- 제목 -->
+
+                        <div class="form-group">
+
+                            <input
+                                type="text"
+                                name="subject"
+                                class="form-control"
+                                placeholder="제목"
+                                required>
+
+                        </div>
+
+
+                        <!-- 내용 -->
+
+                        <div class="form-group">
+
+                            <textarea
+                                name="message"
+                                class="form-control"
+                                rows="6"
+                                placeholder="문의 내용을 입력해주세요."
+                                required></textarea>
+
+                        </div>
+
+
+                        <!-- 버튼 -->
+
+                        <div class="form-group text-right">
+
+                            <button
+                                type="submit"
+                                id="contactSubmit"
+                                class="banner_btn">
+                                문의 보내기
+                                <span class="lnr lnr-arrow-right"></span>
+                            </button>
+                        
+                        </div>
+
+
+                        <!-- 결과 -->
+
+                        <div
+                            id="contactResult"
+                            class="contact_result"
+                            role="alert"
+                            aria-live="polite">
+                        </div>
+
+
+                    </form>
             </div>
         </div>
     </div>
@@ -114,7 +180,7 @@
             <div class="col-lg-5 col-sm-6">
                 <aside class="f_widget ab_widget">
                     <div class="f_title"><h3>김준홍</h3></div>
-                    <p>웹 개발, 서버 운영, 데이터베이스 관리 경험을 바탕으로 실제 운영 환경의 문제를 해결하는 개발자임.</p>
+                    <p>웹 개발, 서버 운영, 데이터베이스 관리 경험을 바탕으로 실제 운영 환경의 문제를 해결하는 개발자입니다.</p>
                     <p>© <script>document.write(new Date().getFullYear());</script> JUNHONG KIM. All rights reserved.</p>
                 </aside>
             </div>
@@ -137,94 +203,117 @@
     </div>
 </footer>
 <!--================End Footer Area =================-->
-        <footer class="footer_area p_120">
-        	<div class="container">
-        		<div class="row footer_inner">
-        			<div class="col-lg-5 col-sm-6">
-        				<aside class="f_widget ab_widget">
-        					<div class="f_title">
-        						<h3>About Me</h3>
-        					</div>
-        					<p>Do you want to be even more successful? Learn to love learning and growth. The more effort you put into improving your skills,</p>
-        					<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-</p>
-        				</aside>
-        			</div>
-        			<div class="col-lg-5 col-sm-6">
-        				<aside class="f_widget news_widget">
-        					<div class="f_title">
-        						<h3>주요 기술</h3>
-        					</div>
-        					<p>Stay updated with our latest trends</p>
-        					<div id="mc_embed_signup">
-                                <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="subscribe_form relative">
-                                	<div class="input-group d-flex flex-row">
-                                        <input name="EMAIL" placeholder="Enter email address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address '" required="" type="email">
-                                        <button class="btn sub-btn"><span class="lnr lnr-arrow-right"></span></button>		
-                                    </div>				
-                                    <div class="mt-10 info"></div>
-                                </form>
-                            </div>
-        				</aside>
-        			</div>
-        			<div class="col-lg-2">
-        				<aside class="f_widget social_widget">
-        					<div class="f_title">
-        						<h3>연결</h3>
-        					</div>
-        					<p>Let us be social</p>
-        					<ul class="list">
-        						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-        						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-        						<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-        						<li><a href="#"><i class="fa fa-behance"></i></a></li>
-        					</ul>
-        				</aside>
-        			</div>
-        		</div>
-        	</div>
-        </footer>
-        <!--================End Footer Area =================-->
         
-        <!--================Contact Success and Error message Area =================-->
-        <div id="success" class="modal modal-message fade" role="dialog">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <i class="fa fa-close"></i>
-                        </button>
-                        <h2>Thank you</h2>
-                        <p>Your message is successfully sent...</p>
+        
+<!-- ================================ Google Maps ================================ -->
+
+<script>
+    let contactMap;
+    let contactMarker;
+    let contactInfoWindow;
+
+    function initMap() {
+
+        // 서울특별시 관악구 신림동 중심 좌표
+        const sillimDong = {
+            lat: 37.4842,
+            lng: 126.9296
+        };
+
+        const mapElement = document.getElementById('mapBox');
+
+        if (!mapElement) {
+            console.error('Google Maps: #mapBox 요소를 찾을 수 없음');
+            return;
+        }
+
+        // Google Map 생성
+        contactMap = new google.maps.Map(mapElement, {
+            center: sillimDong,
+            zoom: 16,
+
+            mapTypeControl: true,
+            streetViewControl: true,
+            fullscreenControl: true,
+            zoomControl: true,
+
+            gestureHandling: 'cooperative'
+        });
+
+        // 신림동 Marker
+        contactMarker = new google.maps.Marker({
+            position: sillimDong,
+            map: contactMap,
+            title: '서울특별시 관악구 신림동',
+            animation: google.maps.Animation.DROP
+        });
+
+        // Marker 정보창
+        contactInfoWindow = new google.maps.InfoWindow({
+            content: `
+                <div style="
+                    padding: 8px 12px;
+                    min-width: 180px;
+                    font-family: Arial, sans-serif;
+                ">
+                    <strong style="font-size:14px;">
+                        서울특별시 관악구 신림동
+                    </strong>
+
+                    <div style="
+                        margin-top:5px;
+                        font-size:12px;
+                        color:#777;
+                    ">
+                        JUNHONG KIM Portfolio
                     </div>
                 </div>
-            </div>
-        </div>
+            `
+        });
 
-        <!-- Modals error -->
+        // Marker 클릭
+        contactMarker.addListener('click', function () {
+            contactInfoWindow.open({
+                map: contactMap,
+                anchor: contactMarker
+            });
+        });
 
-        <div id="error" class="modal modal-message fade" role="dialog">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <i class="fa fa-close"></i>
-                        </button>
-                        <h2>Sorry !</h2>
-                        <p> Something went wrong </p>
+        // 처음부터 정보창 표시
+        contactInfoWindow.open({
+            map: contactMap,
+            anchor: contactMarker
+        });
+    }
+
+    // Google Maps API 오류 확인
+    window.gm_authFailure = function () {
+        const mapElement = document.getElementById('mapBox');
+
+        if (mapElement) {
+            mapElement.innerHTML = `
+                <div style="
+                    height:100%;
+                    display:flex;
+                    align-items:center;
+                    justify-content:center;
+                    text-align:center;
+                    padding:30px;
+                    background:#f7f7f7;
+                ">
+                    <div>
+                        <h4>Google Maps를 불러올 수 없음</h4>
+                        <p>
+                            Google Maps API Key 또는 API 설정을 확인해야 함.
+                        </p>
                     </div>
                 </div>
-            </div>
-        </div>
-        <!--================End Contact Success and Error message Area =================-->
-        
-        
-        
-        
-        <script src="js/contact-map.js"></script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSv6xRN9hmdEeXuB7twnPwTFPed-_GoY&callback=initMap"></script>
+            `;
+        }
+    };
+</script>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSv6xRNx9hmdEeXuB7twnPwTFPed-_GoY&callback=initMap&loading=async"></script>
 <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="js/jquery-3.2.1.min.js"></script>
@@ -244,9 +333,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         <script src="js/jquery.form.js"></script>
         <script src="js/jquery.validate.min.js"></script>
         <script src="js/contact.js"></script>
-        <!--gmaps Js-->
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
-        <script src="js/gmaps.min.js"></script>
         <script src="js/theme.js"></script>
     </body>
 </html>

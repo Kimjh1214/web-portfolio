@@ -44,6 +44,10 @@ Table of Content:
 @import url("https://fonts.googleapis.com/css?family=Heebo:300,400,500,700|Roboto:300,400,500,700");
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
+html {
+    scroll-behavior: smooth;
+}
+
 .list {
   list-style: none;
   margin: 0px;
@@ -1210,34 +1214,6 @@ button:focus {
     line-height: 24px;
     padding: 2px 0px; }
 
-.contact_form .form-group {
-  margin-bottom: 10px; }
-  .contact_form .form-group .form-control {
-    font-size: 13px;
-    line-height: 26px;
-    color: #999;
-    border: 1px solid #eeeeee;
-    font-family: "Roboto", sans-serif;
-    border-radius: 0px;
-    padding-left: 20px; }
-    .contact_form .form-group .form-control:focus {
-      box-shadow: none;
-      outline: none; }
-    .contact_form .form-group .form-control.placeholder {
-      color: #999; }
-    .contact_form .form-group .form-control:-moz-placeholder {
-      color: #999; }
-    .contact_form .form-group .form-control::-moz-placeholder {
-      color: #999; }
-    .contact_form .form-group .form-control::-webkit-input-placeholder {
-      color: #999; }
-  .contact_form .form-group textarea {
-    resize: none; }
-    .contact_form .form-group textarea.form-control {
-      height: 140px; }
-.contact_form .submit_btn {
-  margin-top: 20px;
-  cursor: pointer; }
 
 /* Contact Success and error Area css
 ============================================================================================ */
@@ -2827,6 +2803,10 @@ h6 {
 /*----------------------------------------------------*/
 /* Projects Area css
 ============================================================================================ */
+#projects {
+  scroll-margin-top: 80px;
+}
+
 .projects_fillter .filter {
   text-align: center;
   margin-top: 70px;
@@ -2885,6 +2865,8 @@ h6 {
     background: linear-gradient(to right, #8490ff 0%, #62bdfc 70%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; }
+
+  
 
 /* End Projects Area css
 ============================================================================================ */
@@ -3079,6 +3061,128 @@ h6 {
   margin-top: 60px; }
   .copy_right_text p a {
     color: #8490ff; }
+
+/* =================================
+   Contact Form
+================================= */
+
+#contactForm .form-group {
+    margin-bottom: 20px;
+}
+
+
+/* Input / Textarea */
+
+#contactForm .form-control {
+    width: 100%;
+    min-height: 50px;
+    padding: 12px 15px;
+
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+
+    background: #fff;
+
+    font-size: 14px;
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* Textarea */
+
+#contactForm textarea.form-control {
+    min-height: 180px;
+    resize: vertical;
+}
+
+
+/* Focus */
+
+#contactForm .form-control:focus {
+
+    border-color: #222;
+
+    outline: none;
+
+    box-shadow:
+        0 0 0 2px rgba(0, 0, 0, 0.05);
+}
+
+
+/* Placeholder */
+
+#contactForm .form-control::placeholder {
+    color: #999;
+}
+
+
+/* Submit Button */
+
+#contactSubmit {
+    border: 0;
+    cursor: pointer;
+    min-width: 150px;
+    text-align: center;
+}
+
+#contactSubmit:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+
+#contactSubmit span {
+    margin-left: 8px;
+}
+
+
+/* =================================
+   Contact Result
+================================= */
+
+.contact_result {
+
+    display: none;
+
+    margin-top: 20px;
+    padding: 14px 18px;
+
+    border-radius: 3px;
+
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* Success */
+
+.contact_result.success {
+
+    display: block;
+
+    background: #f1f8f3;
+
+    border: 1px solid #c8e6d0;
+
+    color: #2e7d4f;
+}
+
+
+/* Error */
+
+.contact_result.error {
+
+    display: block;
+
+    background: #fff4f4;
+
+    border: 1px solid #f0caca;
+
+    color: #c62828;
+}
 
 /* End Footer Area css
 ============================================================================================ */
